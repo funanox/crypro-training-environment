@@ -1,2 +1,2 @@
 # crypro-training-environment
-training environment for CTF and Algorithm (Python, C++)
+training environment for ctf and algorithm (Python, C++)
