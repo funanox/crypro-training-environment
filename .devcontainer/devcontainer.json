@@ -5,11 +5,16 @@
     "build": {
         "dockerfile": "Dockerfile",
         // Update 'VARIANT' to pick an Ubuntu version: focal, bionic
-        "args": { "VARIANT": "ubuntu-20.04" }
+        "args": {
+            "VARIANT": "ubuntu-20.04"
+        }
     },
     // Set *default* container specific settings.json values on container create.
     "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash",
+        "terminal.integrated.shell.linux": "/usr/bin/bash",
+        "files.exclude": {
+            "**/.gitignore": true
+        },
         "editor.formatOnSave": true,
         "python.languageServer": "Pylance",
         "python.pythonPath": "/usr/bin/python3",
@@ -25,7 +30,7 @@
         "[cpp]": {
             "editor.tabSize": 4,
             "editor.defaultFormatter": "xaver.clang-format" // 拡張機能 Clang-Format を選択
-        },
+        }
     },
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
@@ -41,10 +46,8 @@
     ],
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
-
     // Use 'postCreateCommand' to run commands after the container is created.
     "postCreateCommand": "pip3 install -r requirements.txt",
-
     // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
     "remoteUser": "vscode"
 }
