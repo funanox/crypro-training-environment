@@ -12,9 +12,6 @@
     // Set *default* container specific settings.json values on container create.
     "settings": {
         "terminal.integrated.shell.linux": "/usr/bin/bash",
-        "files.exclude": {
-            "**/.gitignore": true
-        },
         "editor.formatOnSave": true,
         "python.languageServer": "Pylance",
         "python.pythonPath": "/usr/bin/python3",
@@ -40,9 +37,7 @@
         "donjayamanne.git-extension-pack",
         "ms-python.python",
         "ms-python.vscode-pylance",
-        "coenraads.bracket-pair-colorizer-2",
-        "shardulm94.trailing-spaces",
-        "vscodevim.vim"
+        "shardulm94.trailing-spaces"
     ],
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
