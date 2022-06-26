@@ -36,8 +36,8 @@ WSL2上では通常インストールされてると思いますが、\
 念のため`sudo apt install git`とインストールしてください。
 
 ### コンテナのクローンとリモート接続
-WSL2上で好きなところで'git clone https://github.com/funanox/crypro-training-environment.git'としてください。\
-次に'crypro-training-environment'フォルダ以下でVSCodeを起動します。\
+WSL2上で好きなところで`git clone https://github.com/funanox/crypro-training-environment.git`としてください。\
+次に`crypro-training-environment`フォルダ以下でVSCodeを起動します。\
 そして左下の「><」をクリックして`Reopen in Container`を選択すると接続が完了します。
 
 ## その他
