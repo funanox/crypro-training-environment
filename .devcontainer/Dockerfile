@@ -17,3 +17,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     python3-gmpy2 \
     sagemath \
     && apt-get clean
+
+ENV HOME /home/vscode
+RUN dircolors -p > $HOME/.dircolors
+
+RUN sed -i "s|OTHER_WRITABLE 34;42|OTHER_WRITABLE 01;34|" $HOME/.dircolors
