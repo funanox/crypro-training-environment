@@ -7,11 +7,13 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
+RUN sed -i.org -e 's|archive.ubuntu.com|ubuntutym.u-toyama.ac.jp|g' /etc/apt/sources.list
+
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
     build-essential \
     clang-format \
     python3-pip \
     python3-gmpy2 \
-    sagemath
-
+    sagemath \
+    && apt-get clean
