@@ -12,6 +12,7 @@ RUN sed -i.org -e 's|archive.ubuntu.com|ubuntutym.u-toyama.ac.jp|g' /etc/apt/sou
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
     build-essential \
+    netcat \
     python3-pip \
     python3-gmpy2 \
     sagemath \
