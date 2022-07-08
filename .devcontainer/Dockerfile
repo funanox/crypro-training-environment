@@ -11,14 +11,13 @@ RUN sed -i.org -e 's|archive.ubuntu.com|ubuntutym.u-toyama.ac.jp|g' /etc/apt/sou
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
-    build-essential \
+    build-essential libssl-dev libffi-dev \
+    libgmp-dev libmpfr-dev libmpc-dev \
+    python3-pip python3-dev \
     netcat \
-    python3-pip \
-    python3-gmpy2 \
     sagemath \
     && apt-get clean
 
 ENV HOME /home/vscode
 RUN dircolors -p > $HOME/.dircolors
-
 RUN sed -i "s|OTHER_WRITABLE 34;42|OTHER_WRITABLE 01;34|" $HOME/.dircolors
