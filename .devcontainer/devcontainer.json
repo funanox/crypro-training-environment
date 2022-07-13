@@ -38,7 +38,7 @@
     "remoteUser": "vscode",
     "mounts": [
         // WSL2上の好きなフォルダをマウントしてください
-        "source=/mnt/d/MEGA/workspace,target=/home/vscode/workspace,type=bind,consistency=cached"
+        "source=/mnt/e/MEGA/workspace,target=/home/vscode/workspace,type=bind,consistency=cached"
     ],
     "workspaceFolder": "/home/vscode/workspace"
 }
